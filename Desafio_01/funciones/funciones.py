@@ -66,6 +66,7 @@ def mostrar_heroes_por_poder_asc(lis_nombres, lis_iden, lis_gen, lis_pod, lis_al
             mensaje += str(col[fila]) + " | "
         print(mensaje) #TODO: Formatear bien el mensaje
 
+
 def mostrar_heroes_por_poder_des(lis_nombres, lis_iden, lis_gen, lis_pod, lis_alt) -> None:
 
     matriz_ordenada = ordenar_matriz([lis_nombres ,lis_pod, lis_iden, lis_gen, lis_alt], "DES")
@@ -77,6 +78,7 @@ def mostrar_heroes_por_poder_des(lis_nombres, lis_iden, lis_gen, lis_pod, lis_al
         for col in matriz_ordenada:
             mensaje += str(col[fila]) + " | "
         print(mensaje) #TODO: Formatear bien el mensaje
+
 
 def mostrar_heroes_por_poder_segun_usuario(lis_nombres, lis_iden, lis_gen, lis_pod, lis_alt):
 
@@ -97,6 +99,7 @@ def mostrar_heroes_por_poder_segun_usuario(lis_nombres, lis_iden, lis_gen, lis_p
         for col in matriz_ordenada:
             mensaje += str(col[fila]) + " | "
         print(mensaje) #TODO: Formatear bien el mensaje
+
 
 if __name__ == '__main__':
     utn_mostrar_nombres_heroes(
