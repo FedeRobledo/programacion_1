@@ -1,7 +1,6 @@
 from validaciones import validar_opcion
-from funciones import mostrar_menu, limpiar_pantalla
+from funciones import mostrar_menu, limpiar_pantalla, mostrar_nombres_heroes, mostrar_identidades_heroes, mostrar_heroe_mayor_altura, mostrar_heroes_mas_fuertes, mostrar_heroes_genero_femenino
 
-from funciones import mostrar_nombres_heroes, mostrar_identidades_heroes, mostrar_heroe_mayor_altura
 
 def utn_heroes_app(matriz_heroes):
     
@@ -20,8 +19,10 @@ def utn_heroes_app(matriz_heroes):
                 mostrar_heroe_mayor_altura(matriz_heroes)
                 pass
             case 4:
+                mostrar_heroes_mas_fuertes(matriz_heroes)
                 pass
             case 5:
+                mostrar_heroes_genero_femenino(matriz_heroes)
                 pass
             case 6:
                 pass

@@ -1,5 +1,5 @@
 from .auxiliares import obtener_maximo, promedio, obtener_mitad_de_maximo, \
-    ordenar_matriz
+    ordenar_matriz, obtener_idx_de_mayor_poder
 
 def mostrar_nombres_heroes(lis_nom: list):
     for n in lis_nom:
@@ -22,21 +22,20 @@ def mostrar_heroe_mayor_altura(matriz_heroes: list[list]):
 
 
 def mostrar_heroes_mas_fuertes(matriz_heroes: list[list]) -> None:
-    lista_indices = obtener_maximo(matriz_heroes)
+    lista_indices = obtener_idx_de_mayor_poder(matriz_heroes[4])
 
-    # IMPRIMER LISTA DE ITEMS SEGUN INDICE
+    print(lista_indices)
 
-#     for i in range(len(lis_pod)):
-#         if float(lis_pod[i]) == poder:
-#             print(f"Nombre: {lis_nombres[i]}\nIdentidad: {lis_iden[i]}\nGénero: {
-#                   lis_gen[i]}\nPoder: {lis_pod[i]}\nAltura: {lis_alt[i]}\n\n")
+    print(f"El/los Heroes mas fuertes son:\n")
+    for indice in lista_indices:
+        print(f"{matriz_heroes[0][indice]}, con un total de {matriz_heroes[4][indice]} de poder\n")
 
 
-# def utn_filtrar_heroes_genero(lis_nombres: list, lis_iden: list, lis_gen: list, lis_pod: list, lis_alt: list, gen: str):
-#     for i in range(len(lis_gen)):
-#         if lis_gen[i] == gen:
-#             print(f"Nombre: {lis_nombres[i]}\nIdentidad: {lis_iden[i]}\nGénero: {
-#                   lis_gen[i]}\nPoder: {lis_pod[i]}\nAltura: {lis_alt[i]}\n\n")
+def mostrar_heroes_genero_femenino(matriz_heroes: list[list]) -> None:
+    for indice in range(len(matriz_heroes[3])):
+        if matriz_heroes[3][indice] == "Femenino":
+            print(f"Nombre: {matriz_heroes[0][indice]}\nIdentidad: {matriz_heroes[1][indice]}\nGénero: {
+                  matriz_heroes[3][indice]}\nPoder: {matriz_heroes[4][indice]}\nAltura: {matriz_heroes[5][indice]}\n\n")
 
 
 # def utn_mostrar_heroes_poder_superior_promedio(lis_nombres: list, lis_iden: list, lis_gen: list, lis_pod: list, lis_alt: list):

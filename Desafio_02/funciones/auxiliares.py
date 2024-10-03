@@ -9,18 +9,32 @@ def limpiar_pantalla():
 def mostrar_nombre(lis_nom: list, i: int) -> str:
     return lis_nom[i]
 
-def obtener_maximo(lis_num: list) -> float:
+def obtener_idx_de_mayor_poder(lis_num: list) -> float:
     numero = None
     indices_de_mayor_poder = []
 
     for indice in range(len(lis_num)):
         num = lis_num[indice]
+        print("Poder: " + str(lis_num[indice]))
+
         if not numero or numero < num:
+            numero = num
             indices_de_mayor_poder = []
+            print("Reseteo la lista " + str(numero))
+            print(indices_de_mayor_poder)
             indices_de_mayor_poder.append(indice)
         elif numero == num:
             indices_de_mayor_poder.append(indice)
 
+    return indices_de_mayor_poder
+
+def obtener_maximo(lis_num: list) -> float:
+    numero = None
+
+    for num in lis_num:
+        if not numero or numero < num:
+            numero = num
+    
     return float(numero)
 
 def promedio(lis_num: list) -> float:
